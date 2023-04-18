@@ -1,0 +1,22 @@
+[data-theme=light],
+:root:not([data-theme=dark]) {
+    --primary: hsl(329, 98%, 49%);
+    --primary-hover: hsl(329, 90%, 40%);
+    --primary-focus: rgba(217, 32, 107, 0.125);
+}
+
+.main-img {
+    border-radius: var(--border-radius);
+    width: 20em;
+}
+
+ /* adds color fullstop after h1 */
+h1::after {
+    content: ".";
+    color: var(--primary);
+}
+  
+.line-break {
+    margin: 0;
+}
+
