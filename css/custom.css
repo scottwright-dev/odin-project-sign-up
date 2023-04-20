@@ -80,17 +80,15 @@ small {
     }
   
     .content-container {
-      flex-basis: 100vh;
       align-items: center;
+      padding: 0;
+      margin: 0;
     }
   
     .form-container .input-row {
       flex-direction: column;
-      flex-wrap: wrap; 
-    }
-    
-    .form-container label {
-      margin-bottom: var(--form-element-spacing-horizontal);
+      flex-wrap: wrap;
+      gap: 0;
     }
   
     .main-img {
