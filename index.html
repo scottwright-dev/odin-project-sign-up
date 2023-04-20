@@ -5,54 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CircleSync Sign Up</title>
-    <link rel="stylesheet" href="css/pico.css">
+    <link rel="stylesheet" href="css/pico.slim.css">
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-    <main class="container">
+    <div class="container">
+        <div class="img-container">
             <img class="main-img" src="./images/zak-7wBFsHWQDlk-unsplash.jpg" alt="abstract neon shapes">
-                <header>
-                    <h1>CircleSync</h1>
-                    <p class="line-break">Experience the precision and innovation of CircleSync.</p>
-                    <p class="line-break">Join our community and elevate your online presence with expert guidance and cutting-edge solutions.</p>
-                </header>
-            <form method="POST" action="#">
-                <div class="grid">
-                <label for="firstname">
-                    First Name *
-                    <input type="text" id="firstname" name="firstname" placeholder="Enter First Name" required>
-                </label>
-                <label for="lastname">
-                    Last Name *
-                    <input type="text" id="lastname" name="lastname" placeholder="Enter Last Name" required>
-                </label>
+        </div>
+        <div class="content-container">
+            <div class="header-container">
+                <h1>CircleSync</h1>
+                <p>Experience the precision and innovation of CircleSync. 
+                Join our community today and elevate your online presence with our expert guidance and cutting-edge solutions.</p>
+            </div>
+            <form method="POST" action="#" class="form-container">
+                <div class="input-row">
+                    <label for="firstname">
+                        First Name *
+                        <input type="text" id="firstname" name="firstname" placeholder="Enter First Name" required>
+                    </label>
+                    <label for="lastname">
+                        Last Name *
+                        <input type="text" id="lastname" name="lastname" placeholder="Enter Last Name" required>
+                    </label>
                 </div>
-                <div class="grid">
+                <div class="input-row">
                     <label for="email">
                         Email *
                         <input type="email" id="email" name="email" placeholder="Enter Email" required>
                     </label>
-                    <label for="lastname">
+                    <label for="phone">
                         Phone
                         <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number">
                     </label>
-                    </div>
-                    <div class="grid">
-                        <label for="password">
-                            Password *
-                            <input type="password" id="password" name="password" placeholder="Enter Password" 
-                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
-                        </label>               
-                        <label for="password-confirm">
-                            Confirm Password *
-                            <input type="password" id="password-confirm" name="password-confirm" placeholder="Confirm" 
-                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
-                        </label>               
-                        </div>      
-                        <small>* denotes required field</small> 
-                <button type="submit">Sign Up</button>
-                <small>Already have an account? <a href="#">Log in</a></small>
+                </div>
+                <div class="input-row">
+                    <label for="password">
+                        Password *
+                        <input type="password" id="password" name="password" placeholder="Enter Password" 
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
+                    </label>
+                    <label for="password-confirm">
+                        Confirm *
+                        <input type="password" id="password-confirm" name="password-confirm" placeholder="Confirm" 
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
+                    </label>
+                </div>
+                <div class="submit-row">
+                    <small>* denotes required field</small>
+                    <button type="submit">Sign Up</button>
+                    <small>Already have an account? <a href="#">Log in</a></small>
+                </div>
             </form>
-    </main>
+        </div>
+    </div>
 </body>
 </html>

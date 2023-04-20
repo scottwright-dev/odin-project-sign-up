@@ -3,20 +3,61 @@
     --primary: hsl(329, 98%, 49%);
     --primary-hover: hsl(329, 90%, 40%);
     --primary-focus: rgba(217, 32, 107, 0.125);
+    --form-element-spacing-vertical: 0.5rem;
+    --form-element-spacing-horizontal: 0.5rem;
 }
+  
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+  .image-container {
+    flex-basis: 33.33%;
+    padding: 1rem;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .content-container {
+    flex-basis: 66.67%;
+    padding: 1rem;
+  }
+  
+  .header-container {
+    margin-bottom: 1rem;
+  }
+  
+  .form-container .input-row {
+    display: flex;
+  }
+  
+  .form-container input {
+    flex: 1;
+    margin: 2rem;
+    margin: var(--form-element-spacing-horizontal);
+  }
+  
+  .submit-row {
+    margin-top: var(--form-element-spacing-horizontal);
+  }
 
 .main-img {
     border-radius: var(--border-radius);
-    width: 20em;
+    height: 700px;
 }
 
- /* adds color fullstop after h1 */
+/* adds color fullstop after h1 */
 h1::after {
     content: ".";
     color: var(--primary);
 }
-  
-.line-break {
-    margin: 0;
+
+h1 {
+    margin-top: -0.75rem;
+    margin-bottom: var(--grid-spacing-horizontal);
 }
 
