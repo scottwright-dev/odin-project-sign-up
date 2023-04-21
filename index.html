@@ -40,7 +40,7 @@
                         <input type="tel" id="phone" name="phone" placeholder="enter phone number">
                     </label>
                 </div>
-                <div class="input-row">
+                <div class="input-row password-row">
                     <label for="password">
                         Password *
                         <input type="password" id="password" name="password" placeholder="enter password" 
@@ -51,6 +51,9 @@
                         <input type="password" id="password-confirm" name="password-confirm" placeholder="confirm password" 
                         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
                     </label>
+                </div>
+                <div class="password-requirements">
+                    <small>Password must be minimum 8 characters and contain 1 uppercase letter and 1 number.</small>
                 </div>
                 <div class="submit-row">
                     <button type="submit">Sign Up</button>
