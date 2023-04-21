@@ -13,14 +13,29 @@
     margin-top: 5%;
 }
 
-  .image-container {
-    flex-basis: 33.33%;
-  }
-  
-  .image-container img {
+.img-container {
     max-width: 100%;
     height: auto;
+    flex-basis: 33.33%;
+    position: relative;
   }
+  
+
+  .logo-overlay {
+    position: absolute;
+    bottom: 40%;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+  }
+
+  .logo-img {
+    width: 50%;
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+    object-fit: contain;
+}
+
   
   .content-container {
     flex-basis: 66.67%;
@@ -48,7 +63,7 @@
   }
 
   .submit-row {
-    margin-top: 1.5rem;
+    margin-top: 1.425rem;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -91,7 +106,8 @@ h1 {
       gap: 0;
     }
   
-    .main-img {
+    .main-img,
+    .logo-overlay {
       display: none;
     }
   }
