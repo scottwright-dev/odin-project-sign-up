@@ -1,3 +1,4 @@
+
 [data-theme=light],
 :root:not([data-theme=dark]) {
     --primary: hsl(329, 98%, 49%);
@@ -5,6 +6,7 @@
     --primary-focus: rgba(217, 32, 107, 0.125);
     --form-element-spacing-vertical: 0.5rem;
     --form-element-spacing-horizontal: 0.5rem;
+    --form-element-valid-border-color: hsl(144, 73%, 75%);
 }
   
 .container {
@@ -13,13 +15,43 @@
     margin-top: 5%;
 }
 
+/* CONTAINERS */
+
 .img-container {
     max-width: 100%;
     height: auto;
     flex-basis: 33.33%;
     position: relative;
   }
+
+  .content-container {
+    flex-basis: 66.67%;
+    padding: 1rem;
+  }
   
+  .header-container {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  /* adds color fullstop after h1 */
+h1::after {
+    content: ".";
+    color: var(--primary);
+}
+
+h1 {
+    margin-top: 0.375rem; 
+    margin-bottom: var(--grid-spacing-horizontal);
+}
+  
+  /* IMAGE AND LOGO */
+
+  .main-img {
+    height: 615px; /* CHANGE THIS!! ONLY TEMP! */
+    border-radius: var(--border-radius);
+    margin-top: 2rem;
+}
 
   .logo-overlay {
     position: absolute;
@@ -36,30 +68,22 @@
     object-fit: contain;
 }
 
-  
-  .content-container {
-    flex-basis: 66.67%;
-    padding: 1rem;
-  }
-  
-  .header-container {
-    position: relative;
-    margin-bottom: 1rem;
-  }
+  /* FORM STYLES*/
   
   .form-container .input-row {
     display: flex;
     gap: 1.5rem;
   }
   
-  .password-row {
-    margin-bottom: -1rem;
-  }
-
   .form-container input {
     flex: 1;
     margin-right: 2rem;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+
+  .password-row {
+    margin-bottom: -1rem;
   }
 
   .submit-row {
@@ -69,24 +93,15 @@
     align-items: center;
   }
 
-.main-img {
-    height: 615px; /* CHANGE THIS!! ONLY TEMP! */
-    border-radius: var(--border-radius);
-    margin-top: 2rem;
-    
+  input[type="text"]:valid:not(#phone):focus,
+  input[type="email"]:valid:not(#phone):focus,
+  input[type="password"]:valid:not(#phone):focus,
+  input[type="tel"]:valid:focus {
+  border-color: var(--form-element-valid-border-color);
 }
 
-/* adds color fullstop after h1 */
-h1::after {
-    content: ".";
-    color: var(--primary);
-}
-
-h1 {
-    margin-top: 0.375rem; 
-    margin-bottom: var(--grid-spacing-horizontal);
-}
-
+  
+  
 /* MEDIA QUERY FOR MOBILE */
 
 @media (max-width: 768px) {
