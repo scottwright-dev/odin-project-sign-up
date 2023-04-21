@@ -26,37 +26,38 @@
                 <div class="input-row">
                     <label for="firstname">
                         First Name *
-                        <input type="text" id="firstname" name="firstname" placeholder="enter first name" required>
+                        <input type="text" id="firstname" name="firstname" placeholder="enter first name" aria-required="true" required>
                     </label>
                     <label for="lastname">
                         Last Name *
-                        <input type="text" id="lastname" name="lastname" placeholder="enter second name" required>
+                        <input type="text" id="lastname" name="lastname" placeholder="enter last name" aria-required="true" required>
                     </label>
                 </div>
                 <div class="input-row">
                     <label for="email">
                         Email *
-                        <input type="email" id="email" name="email" placeholder="enter email" required>
+                        <input type="email" id="email" name="email" placeholder="enter email" 
+                        pattern="\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+" aria-required="true" required>
                     </label>
                     <label for="phone">
                         Phone
-                        <input type="tel" id="phone" name="phone" placeholder="enter phone number">
+                        <input type="tel" id="phone" name="phone" placeholder="enter phone number" aria-required="false" >
                     </label>
                 </div>
                 <div class="input-row password-row">
                     <label for="password">
                         Password *
                         <input type="password" id="password" name="password" placeholder="enter password" 
-                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" aria-required="true" required>
                     </label>
                     <label for="password-confirm">
                         Confirm *
                         <input type="password" id="password-confirm" name="password-confirm" placeholder="confirm password" 
-                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" aria-required="true" required>
                     </label>
                 </div>
                 <div class="password-requirements">
-                    <small>Password must be minimum 8 characters and contain 1 uppercase letter and 1 number.</small>
+                    <small>Password must contain a minimum 8 characters including 1 uppercase letter and 1 number.</small>
                 </div>
                 <div class="submit-row">
                     <button type="submit">Sign Up</button>
