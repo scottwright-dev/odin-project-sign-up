@@ -10,8 +10,18 @@ passwordConfirmInput.addEventListener("input", () => {
   if (password !== passwordConfirm) {
     passwordConfirmInput.setCustomValidity("Passwords do not match.");
     passwordConfirmInput.classList.add("invalid");
+    event.preventDefault();
   } else {
     passwordConfirmInput.setCustomValidity("");
     passwordConfirmInput.classList.remove("invalid");
   }
+});
+
+/* PAGE RELOAD ON SUBMIT */
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  location.reload();
 });
