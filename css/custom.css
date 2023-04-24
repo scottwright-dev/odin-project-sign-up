@@ -20,12 +20,12 @@
 .img-container {
     max-width: 100%;
     height: auto;
-    flex-basis: 33.33%;
+    flex-basis: auto;
     position: relative;
   }
 
   .content-container {
-    flex-basis: 66.67%;
+    flex-basis: 60%;
     padding: 1rem;
   }
   
@@ -77,7 +77,6 @@ h1 {
   
   .form-container input {
     flex: 1;
-    margin-right: 2rem;
     box-sizing: border-box;
     padding: 1rem;
   }
@@ -93,14 +92,24 @@ h1 {
     align-items: center;
   }
 
-  input[type="text"]:valid:not(#phone):focus,
-  input[type="email"]:valid:not(#phone):focus,
-  input[type="password"]:valid:not(#phone):focus,
-  input[type="tel"]:valid:focus {
-  border-color: var(--form-element-valid-border-color);
-}
-
+  /* INPUT BORDER COLORS FOR VALID/INVALID INPUT FEEDBACK */
   
+  input[type="text"]:valid:not(#phone):focus:not(:focus),
+  input[type="email"]:valid:not(#phone):focus:not(:focus),
+  input[type="password"]:valid:not(#phone):focus:not(:focus),
+  input[type="tel"]:valid:focus,
+  input[type="text"]:valid:not(#phone):not(:focus),
+  input[type="email"]:valid:not(#phone):not(:focus),
+  input[type="password"]:valid:not(#phone):not(:focus) {
+    border-color: var(--form-element-valid-border-color);
+  }
+
+  input[type="text"]:invalid:not(#phone):not(:placeholder-shown),
+  input[type="email"]:invalid:not(#phone):not(:placeholder-shown),
+  input[type="password"]:invalid:not(#phone):not(:placeholder-shown),
+  input[type="tel"]:invalid:not(:placeholder-shown) {
+  border-color: var(--form-element-invalid-border-color);
+}
   
 /* MEDIA QUERY FOR MOBILE */
 
@@ -126,4 +135,5 @@ h1 {
       display: none;
     }
   }
+
   
