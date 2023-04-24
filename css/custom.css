@@ -136,4 +136,20 @@ h1 {
     }
   }
 
+  /* MEDIA QUERIES TO COUNTER TEXT WRAPPING AT SMALLER SIZES */
+  @media (max-width: 1200px) {
+    .header-container p {
+        font-size: 0.95rem; 
+        line-height: 1.650;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-container p {
+        font-size: 1rem; 
+        line-height: 1.275;
+    }
+}
+
+
   
