@@ -646,6 +646,7 @@ h1 {
 }
 
 /* FORM STYLES*/
+
 .form-container .input-row {
   display: flex;
   gap: 1.5rem;
@@ -669,6 +670,16 @@ h1 {
 }
 
 /* INPUT BORDER COLORS FOR VALID/INVALID INPUT FEEDBACK */
+
+input:focus,
+#phone:focus  {
+  border-color: var(--primary);
+}
+
+#phone:not(:placeholder-shown):not(:focus) {
+  border-color: var(--form-element-border-color);
+}
+
 input[type=text]:valid:not(#phone):focus:not(:focus),
 input[type=email]:valid:not(#phone):focus:not(:focus),
 input[type=password]:valid:not(#phone):focus:not(:focus),
